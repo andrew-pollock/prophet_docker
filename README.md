@@ -1,2 +1,6 @@
-# prophet_docker
-Building a docker image for the R Prophet package
+[![Build Status](https://img.shields.io/docker/cloud/build/apollock92/r_prophet)](https://hub.docker.com/repository/docker/apollock92/r_prophet)
+
+# Prophet for R Docker Image
+Dockerfile for building a docker image for the R Prophet package.
+
+Uses the 4.0.0 R base, with the [prophet](https://github.com/facebook/prophet) package and it's dependencies installed.
