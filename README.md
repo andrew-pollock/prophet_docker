@@ -3,4 +3,4 @@
 # Prophet for R Docker Image
 Dockerfile for building a docker image for the R Prophet package.
 
-Uses the 4.0.0 R base, with the [prophet](https://github.com/facebook/prophet) package and it's dependencies installed.
+Uses the 4.0.0 R base, with the [prophet](https://github.com/facebook/prophet) package (v0.6) and it's dependencies installed.
