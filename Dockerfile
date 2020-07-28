@@ -1,4 +1,4 @@
-FROM rocker/rstudio:3.6.3
+FROM rocker/rstudio:4.0.0
 ## Using the R 4.0 base image
 
 
@@ -15,5 +15,5 @@ RUN apt-get update && \
 
 ## Install prophet using install2.r
 ## Using an MRAN repo ensures consistency
-RUN install2.r -r https://mran.microsoft.com/snapshot/2020-07-02 -e prophet
+#RUN install2.r -r https://mran.microsoft.com/snapshot/2020-07-02 -e prophet
 
