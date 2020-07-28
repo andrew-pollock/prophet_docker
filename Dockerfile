@@ -1,4 +1,4 @@
-FROM rocker/rstudio:4.0.0
+FROM rocker/rstudio:3.6.3
 ## Using the R 4.0 base image
 
 
