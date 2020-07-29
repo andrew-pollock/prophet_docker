@@ -15,5 +15,5 @@ RUN apt-get update && \
 
 ## Install prophet using install2.r
 ## Using an MRAN repo ensures consistency
-RUN install2.r -r https://mran.microsoft.com/snapshot/2020-07-02 -e data.tablr
+RUN install2.r -r https://mran.microsoft.com/snapshot/2020-07-02 -e data.table
 
