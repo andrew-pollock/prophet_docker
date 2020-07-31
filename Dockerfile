@@ -11,4 +11,4 @@ RUN echo "r <- getOption('repos'); \
 	  options(repos = r);" > ~/.Rprofile
 
 ## Install prophet using install2.r
-RUN install2.r -r -e prophet
+RUN install2.r -e prophet
