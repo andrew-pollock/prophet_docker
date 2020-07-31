@@ -2,10 +2,15 @@ FROM rocker/rstudio:4.0.0
 ## Using the R 4.0 base image
 
 
+# Add Michael Rutter's c2d4u3.5 PPA (and rrutter3.5 for CRAN builds too)
+sudo add-apt-repository -y "ppa:marutter/rrutter3.5"
+sudo add-apt-repository -y "ppa:marutter/c2d4u3.5"
+sudo apt update
+sudo apt install r-cran-rstan
+
 ## Install rstan and dependencies from linux binaries
 RUN apt-get update && \  
     apt-get install -y -qq \  
-        r-cran-rstan \
 	r-cran-zoo \
 	r-cran-tidyr \
 	r-cran-dygraphs \
