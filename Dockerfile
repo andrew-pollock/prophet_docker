@@ -1,12 +1,14 @@
 FROM rocker/rstudio:4.0.0
-## Using the R 4.0 base image
+## Using a base image with R4.0.0 and RStudio 1.3.1056
 
-## Install rstan and dependencies from linux binaries
+## Check for updates
 RUN apt-get update
 
-RUN install2.r -r https://mran.microsoft.com/snapshot/2020-06-23 -e rstan
-RUN install2.r -r https://mran.microsoft.com/snapshot/2020-06-23 -e rstantools
+## Explicitly setting my default RStudio Package Manager Repo
+## Checkpoint 291 uses packages as at 08/06/2020
+RUN echo "r <- getOption('repos'); \
+	  r['CRAN'] <- 'https://packagemanager.rstudio.com/all/__linux__/focal/291'; \
+	  options(repos = r);" > ~/.Rprofile
 
 ## Install prophet using install2.r
-## Using an MRAN repo ensures consistency
-RUN install2.r -r https://mran.microsoft.com/snapshot/2020-06-23 -e prophet
+RUN install2.r -r -e prophet
