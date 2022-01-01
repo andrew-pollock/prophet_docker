@@ -23,3 +23,9 @@ jobs:
       run: docker build . --file Dockerfile --tag apollock92/r_prophet:latest
     - name: Docker Push
       run: docker push ${{secrets.DOCKER_USER}}/r_prophet
+    - name: Docker Hub Description
+      uses: peter-evans/dockerhub-description@v2
+      with:
+        username: ${{secrets.DOCKER_USER}}
+        password: ${{secrets.DOCKER_PASSWORD}}
+        repository: apollock92/r_prophet
